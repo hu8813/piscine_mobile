@@ -107,16 +107,16 @@ class MyHomePage extends StatelessWidget {
   }
 
   Widget _buildButton(BuildContext context, String text) {
-    return ElevatedButton(
-      onPressed: () {
-        print('Button pressed: $text');
-      },
-      child: Text(text),
-      style: ElevatedButton.styleFrom(
-        primary: Theme.of(context).primaryColor, // Use same color as AppBar
-        minimumSize: const Size(80, 80), // Set minimum size for buttons
-        padding: const EdgeInsets.all(24), // Add padding for better spacing
-      ),
-    );
-  }
+  return ElevatedButton(
+    onPressed: () {
+      print('Button pressed: $text');
+    },
+    child: Text(text),
+    style: ElevatedButton.styleFrom(
+      backgroundColor: Theme.of(context).primaryColor, // Use background color
+      minimumSize: const Size(80, 80), // Set minimum size for buttons
+      padding: const EdgeInsets.all(24), // Add padding for better spacing
+    ),
+  );
+}
 }
